@@ -60,13 +60,13 @@
         <img src="assets/logo-color.png" alt="Misiones Ecuador" style="height: 42px; width: auto; display: block;">
       </a>
       <nav data-mnav style="display: flex; align-items: center; gap: 32px;">
-        <a href="quienes-somos.dc.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Quiénes somos</a>
-        <a href="que-hacemos.dc.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Qué hacemos</a>
-        <a href="impacto.dc.html" style="font-size: 15px; font-weight: 700; color: #296FB7; text-decoration: none;">Nuestro impacto</a>
-        <a href="sumate.dc.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Súmate</a>
-        <a href="blog.dc.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Blog</a>
+        <a href="quienes-somos.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Quiénes somos</a>
+        <a href="que-hacemos.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Qué hacemos</a>
+        <a href="impacto.html" style="font-size: 15px; font-weight: 700; color: #296FB7; text-decoration: none;">Nuestro impacto</a>
+        <a href="sumate.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Súmate</a>
+        <a href="blog.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Blog</a>
       </nav>
-      <a href="donar.dc.html" style="display: inline-flex; align-items: center; background: {{ donateColor }}; color: #1A1A1A; font-weight: 700; font-size: 15px; padding: 12px 24px; border-radius: 999px; text-decoration: none; white-space: nowrap; box-shadow: 0 8px 22px -8px rgba(255,203,4,0.7); transition: transform 0.2s ease;" style-hover="transform: translateY(-1px);">Donar</a>
+      <a href="donar.html" style="display: inline-flex; align-items: center; background: {{ donateColor }}; color: #1A1A1A; font-weight: 700; font-size: 15px; padding: 12px 24px; border-radius: 999px; text-decoration: none; white-space: nowrap; box-shadow: 0 8px 22px -8px rgba(255,203,4,0.7); transition: transform 0.2s ease;" style-hover="transform: translateY(-1px);">Donar</a>
     </div>
   </header>
 
@@ -267,7 +267,7 @@
             <div>
               <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 11px;">
                 <span style="width: 9px; height: 9px; border-radius: 50%; background: #143356; display: inline-block; flex-shrink: 0;"></span>
-                <span style="font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B7682;">Guayaquil</span>
+                <span style="font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B7682;">Diócesis de Guayaquil</span>
                 <span style="flex: 1; height: 1px; background: #E2EAF3;"></span>
               </div>
               <div style="display: flex; flex-direction: column; gap: 12px; padding-left: 17px;">
@@ -288,6 +288,65 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ============ ARCHIVO DE MISIONES ============ -->
+  <section id="misiones" data-screen-label="Archivo de misiones" style="position: relative; background: #FFFFFF; padding: clamp(56px, 8vw, 110px) clamp(20px, 4vw, 60px); overflow: hidden;">
+    <div style="position: absolute; top: -160px; left: -140px; width: 420px; height: 420px; border-radius: 50%; border: 1.5px solid #EDF2F7; pointer-events: none;"></div>
+
+    <div style="position: relative; max-width: 1320px; margin: 0 auto;">
+      <div data-reveal style="max-width: 700px; margin: 0 auto clamp(36px, 4.5vw, 56px); text-align: center;">
+        <div style="display: inline-flex; align-items: center; gap: 9px; color: #296FB7; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px;">
+          <span style="width: 24px; height: 1.5px; background: #296FB7; display: inline-block;"></span>
+          Archivo de misiones
+          <span style="width: 24px; height: 1.5px; background: #296FB7; display: inline-block;"></span>
+        </div>
+        <h2 style="font-family: 'Block Berthold', 'Montserrat', sans-serif; font-weight: 400; font-size: clamp(28px, 3.8vw, 50px); line-height: 0.98; text-transform: uppercase; letter-spacing: 0.005em; margin: 0 0 18px; color: #143356; text-wrap: balance;">Misión por misión</h2>
+        <p style="font-size: clamp(15px, 1.2vw, 18px); line-height: 1.62; color: #45505B; margin: 0; text-wrap: pretty;">
+          Veintitrés misiones entre 2024 y 2025. Cada una con su fecha, su tipo, la comunidad donde ocurrió y la gente que la hizo posible.
+        </p>
+      </div>
+
+      <sc-for list="{{ missionYears }}" as="m" hint-placeholder-count="10">
+        <div>
+          <sc-if value="{{ m.isYear }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; align-items: baseline; gap: 16px; padding: clamp(30px, 4vw, 48px) 0 16px; border-bottom: 2px solid #143356;">
+              <span style="font-family: 'Block Berthold', 'Montserrat', sans-serif; font-size: clamp(34px, 4.4vw, 56px); line-height: 1; color: #143356;">{{ m.year }}</span>
+              <span style="font-size: 13.5px; font-weight: 600; color: #6B7682;">{{ m.summary }}</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{ m.isRow }}" hint-placeholder-val="{{ true }}">
+            <div data-mrow style="display: grid; grid-template-columns: 62px 178px 1fr 96px 118px 116px; gap: 18px; align-items: center; padding: 17px 4px; border-bottom: 1px solid #EEF1F4;">
+              <span style="font-family: 'Block Berthold', 'Montserrat', sans-serif; font-size: 19px; color: #A9B6C4; text-transform: uppercase;">{{ m.m }}</span>
+              <span data-mtype style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: {{ m.color }};">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: {{ m.color }}; flex-shrink: 0;"></span>
+                {{ m.type }}
+              </span>
+              <div style="min-width: 0;">
+                <div style="font-weight: 700; font-size: 15.5px; color: #143356;">{{ m.place }}</div>
+                <div style="font-size: 12.5px; color: #8A93A0;">{{ m.dio }}</div>
+              </div>
+              <div>
+                <div style="font-family: 'Block Berthold', 'Montserrat', sans-serif; font-size: 21px; line-height: 1; color: #296FB7;">{{ m.vol }}</div>
+                <div style="font-weight: 700; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #A0A9B4;">Voluntarios</div>
+              </div>
+              <div>
+                <div style="font-family: 'Block Berthold', 'Montserrat', sans-serif; font-size: 21px; line-height: 1; color: #00897F;">{{ m.ben }}</div>
+                <div style="font-weight: 700; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #A0A9B4;">Beneficiarios</div>
+              </div>
+              <div style="display: flex; justify-content: flex-end;">
+                <sc-if value="{{ m.hasGallery }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ m.open }}" style="display: inline-flex; align-items: center; gap: 7px; background: none; border: none; padding: 0; cursor: pointer; font-family: 'Montserrat', sans-serif; color: #296FB7; font-weight: 700; font-size: 13.5px; white-space: nowrap; transition: gap 0.2s ease;" style-hover="gap: 11px;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 17-5-5L5 21"></path></svg>
+                    Ver fotos
+                  </button>
+                </sc-if>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
     </div>
   </section>
 
@@ -348,8 +407,8 @@
         Tu aporte hace posible la próxima misión, la próxima brigada, el próximo encuentro.
       </p>
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px;">
-        <a href="donar.dc.html" style="display: inline-flex; align-items: center; gap: 10px; background: {{ donateColor }}; color: #1A1A1A; font-weight: 700; font-size: 17px; padding: 17px 36px; border-radius: 999px; text-decoration: none; box-shadow: 0 14px 32px -12px rgba(255,203,4,0.7); transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">Donar <span style="font-size: 19px; line-height: 1;">→</span></a>
-        <a href="sumate.dc.html" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #1C4D85; font-weight: 700; font-size: 17px; padding: 17px 34px; border-radius: 999px; text-decoration: none; transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">Quiero sumarme</a>
+        <a href="donar.html" style="display: inline-flex; align-items: center; gap: 10px; background: {{ donateColor }}; color: #1A1A1A; font-weight: 700; font-size: 17px; padding: 17px 36px; border-radius: 999px; text-decoration: none; box-shadow: 0 14px 32px -12px rgba(255,203,4,0.7); transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">Donar <span style="font-size: 19px; line-height: 1;">→</span></a>
+        <a href="sumate.html" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #1C4D85; font-weight: 700; font-size: 17px; padding: 17px 34px; border-radius: 999px; text-decoration: none; transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">Quiero sumarme</a>
       </div>
     </div>
   </section>
@@ -369,19 +428,19 @@
           <h4 style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin: 0 0 18px;">Navega</h4>
           <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
             <li><a href="index.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Inicio</a></li>
-            <li><a href="quienes-somos.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Quiénes somos</a></li>
-            <li><a href="que-hacemos.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Qué hacemos</a></li>
-            <li><a href="impacto.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Nuestro impacto</a></li>
-            <li><a href="blog.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Blog</a></li>
+            <li><a href="quienes-somos.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Quiénes somos</a></li>
+            <li><a href="que-hacemos.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Qué hacemos</a></li>
+            <li><a href="impacto.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Nuestro impacto</a></li>
+            <li><a href="blog.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Blog</a></li>
           </ul>
         </div>
         <div>
           <h4 style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin: 0 0 18px;">Participa</h4>
           <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
-            <li><a href="sumate.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Ser misionero</a></li>
-            <li><a href="sumate.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Voluntariado</a></li>
-            <li><a href="donar.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Donar</a></li>
-            <li><a href="sumate.dc.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Orar con nosotros</a></li>
+            <li><a href="sumate.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Ser misionero</a></li>
+            <li><a href="sumate.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Voluntariado</a></li>
+            <li><a href="donar.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Donar</a></li>
+            <li><a href="sumate.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Orar con nosotros</a></li>
           </ul>
         </div>
         <div>
@@ -545,7 +604,7 @@ class Component extends DCLogic {
       'med-2025-11': {
         title: 'Brigada médica en Boca de Caña y Monte Alto',
         meta: 'Noviembre 2025 · Diócesis de Daule',
-        post: 'post-brigada-tarifa.dc.html',
+        post: 'post-brigada-tarifa.html',
         photos: [
           { src: 'assets/qh-brigada.jpg', cap: 'Estaciones de atención montadas en la cancha del recinto' },
           { src: 'assets/qh-medica.jpg', cap: 'Control de presión a uno de los niños de la comunidad' },
@@ -557,7 +616,7 @@ class Component extends DCLogic {
       'cons-2025-10': {
         title: 'Construcción de la capilla de El Laurel',
         meta: 'Octubre 2025 · Diócesis de Daule',
-        post: 'post-capilla-el-laurel.dc.html',
+        post: 'post-capilla-el-laurel.html',
         photos: [
           { src: 'assets/qh-construccion.jpg', cap: 'Voluntarios y vecinos levantando las paredes de bloque' },
           { src: 'assets/qh-evangelizacion.jpg', cap: 'Comunión durante la misa de bendición de la capilla' },
@@ -567,7 +626,7 @@ class Component extends DCLogic {
       'med-2025-03': {
         title: 'Brigada médica en Cañaribamba',
         meta: 'Marzo 2025 · Diócesis de Cuenca',
-        post: 'post-testimonio-canaribamba.dc.html',
+        post: 'post-testimonio-canaribamba.html',
         photos: [
           { src: 'assets/qh-consulta.jpg', cap: 'Consulta en el patio de la casa comunal' },
           { src: 'assets/qh-esteto.jpg', cap: 'Atención pediátrica durante la jornada' },
@@ -577,7 +636,7 @@ class Component extends DCLogic {
       'camp-2024-12': {
         title: 'Navidad en Aguas Verdes y San Cristóbal',
         meta: 'Diciembre 2024 · Diócesis de Santa Elena',
-        post: 'post-navidad-aguas-verdes.dc.html',
+        post: 'post-navidad-aguas-verdes.html',
         photos: [
           { src: 'assets/qs-capilla-opt.jpg', cap: 'Misa de Nochebuena en la capilla de Aguas Verdes' },
           { src: 'assets/qs-encuentro-opt.jpg', cap: 'Entrega de canastas casa por casa' },

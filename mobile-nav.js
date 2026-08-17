@@ -4,11 +4,11 @@
 (function () {
   var BP = 820;
   var LINKS = [
-    { href: 'quienes-somos.dc.html', label: 'Quiénes somos' },
-    { href: 'que-hacemos.dc.html', label: 'Qué hacemos' },
-    { href: 'impacto.dc.html', label: 'Nuestro impacto' },
-    { href: 'sumate.dc.html', label: 'Súmate' },
-    { href: 'blog.dc.html', label: 'Blog' }
+    { href: 'quienes-somos.html', label: 'Quiénes somos' },
+    { href: 'que-hacemos.html', label: 'Qué hacemos' },
+    { href: 'impacto.html', label: 'Nuestro impacto' },
+    { href: 'sumate.html', label: 'Súmate' },
+    { href: 'blog.html', label: 'Blog' }
   ];
 
   var isOpen = false, btn, sheet, bars = [], items = [], scrollY = 0;
@@ -20,8 +20,15 @@
     s.textContent =
       '#me-burger{display:none}' +
       '@media (max-width:' + BP + 'px){' +
-        'header a[href="donar.dc.html"],header a[href*="paypal.com"]{display:none !important}' +
-        'header [data-me-lang]{margin-right:50px !important}' +
+        /* Coincide con cualquier forma del enlace de donar (donar.html, /donar,
+           donar.html, /donate, PayPal directo): en producción la ruta cambia y una
+           coincidencia exacta dejaba el botón visible bajo el burger. */
+        'header a[href*="donar"],header a[href*="donate"],header a[href*="paypal.com"]{display:none !important}' +
+        /* Reserva el carril del burger pase lo que pase: si algún elemento del
+           header no queda cubierto por las reglas de arriba, se corre en vez de
+           quedar debajo del botón. Sustituye al margen que antes llevaba el
+           selector de idioma. */
+        'header > div{padding-right:74px !important}' +
         '#me-burger{display:flex}' +
       '}' +
       '@media (prefers-reduced-motion: reduce){#me-sheet,#me-sheet *{transition:none !important}}';
@@ -104,7 +111,7 @@
       'opacity:0;transform:translateY(14px);transition:opacity .4s ease,transform .4s cubic-bezier(.2,.7,.2,1);';
 
     var donate = document.createElement('a');
-    donate.href = 'donar.dc.html';
+    donate.href = 'donar.html';
     donate.textContent = 'Donar';
     donate.style.cssText = 'display:inline-flex;align-items:center;background:#FFCB04;color:#1A1A1A;font-weight:700;' +
       "font-family:'Montserrat',sans-serif;font-size:16px;padding:15px 32px;border-radius:999px;text-decoration:none;";
