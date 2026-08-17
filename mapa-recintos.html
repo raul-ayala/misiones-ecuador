@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dónde servimos — Misiones Ecuador</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=block" rel="stylesheet">
+<link rel="preload" href="assets/BlockBertholdCondensed.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<style>
+  @font-face {
+    font-family: 'Block Berthold';
+    src: url('assets/BlockBertholdCondensed.ttf') format('truetype');
+    font-weight: normal; font-style: normal; font-display: block;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; font-family: 'Montserrat', system-ui, sans-serif; background: #F4F8FC; }
+  #map { position: absolute; inset: 0; background: #DCE6F0; }
+
+  .me-pin {
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Block Berthold', 'Montserrat', sans-serif;
+    font-size: 15px; color: #FFFFFF;
+    border-radius: 50%; border: 2.5px solid #FFFFFF;
+    box-shadow: 0 6px 16px -4px rgba(13,32,56,0.55);
+    transition: transform 0.18s ease;
+  }
+  .me-pin:hover { transform: scale(1.12); }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 16px; padding: 4px 2px;
+    box-shadow: 0 18px 44px -18px rgba(13,32,56,0.5);
+  }
+  .leaflet-popup-content { margin: 14px 16px; font-size: 13px; line-height: 1.5; }
+  .me-pop-dio {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 5px;
+  }
+  .me-pop-zone {
+    font-family: 'Block Berthold', 'Montserrat', sans-serif;
+    font-size: 20px; line-height: 1.05; text-transform: uppercase;
+    color: #143356; margin-bottom: 10px;
+  }
+  .me-pop-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+  .me-pop-list li { display: flex; align-items: center; gap: 7px; color: #45505B; font-size: 12.5px; }
+  .me-pop-list li::before {
+    content: ''; width: 4px; height: 4px; border-radius: 50%;
+    background: #A9BCCE; flex-shrink: 0;
+  }
+
+  .me-legend {
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+    padding: 13px 15px; border-radius: 14px;
+    box-shadow: 0 10px 30px -12px rgba(13,32,56,0.35);
+    font-size: 12px; line-height: 1.4;
+  }
+  .me-legend h4 {
+    margin: 0 0 9px; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: #8A93A0;
+  }
+  .me-legend-row { display: flex; align-items: center; gap: 8px; margin-top: 5px; color: #3A4654; font-weight: 500; }
+  .me-legend-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid #FFFFFF; box-shadow: 0 1px 3px rgba(0,0,0,0.25); }
+  .leaflet-control-attribution { font-size: 10px; }
+  @media (max-width: 560px) {
+    .me-legend { padding: 10px 12px; font-size: 11px; }
+  }
+</style>
+<script src="i18n.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<script>
+(function () {
+  // Zone-level locations (parish / canton seats) verified against public sources.
+  // The recintos inside each zone are listed in the popup.
+  var DIO = {
+    daule:  { label: 'Diócesis de Daule',       color: '#296FB7' },
+    elena:  { label: 'Diócesis de Santa Elena', color: '#00A69C' },
+    cuenca: { label: 'Diócesis de Cuenca',      color: '#C79600' },
+    gye:    { label: 'Guayaquil',               color: '#143356' }
+  };
+
+  var ZONES = [
+    { zone: 'Tarifa, Samborondón', dio: 'daule',  lat: -1.9500, lng: -79.7200,
+      recintos: ['Boca de Caña', 'Monte Alto', 'La Margarita', 'El Carmen', 'Tarifa', 'La Alianza', 'El Rosario'] },
+    { zone: 'Daule', dio: 'daule',  lat: -1.8680, lng: -79.9770,
+      recintos: ['El Jigual', 'El Laurel'] },
+    { zone: 'Bajada de Chanduy, Cerecita', dio: 'elena',  lat: -2.3076, lng: -80.2859,
+      recintos: ['Aguas Verdes', 'San Cristóbal'] },
+    { zone: 'Azuay — Santa Isabel', dio: 'cuenca', lat: -3.2100, lng: -79.3400,
+      recintos: ['Huasipamba', 'Cañaribamba', 'Tugula'] },
+    { zone: 'Guayaquil', dio: 'gye', lat: -2.1900, lng: -79.8900,
+      recintos: ['Sabanilla'] }
+  ];
+
+  var map = L.map('map', { scrollWheelZoom: false, zoomControl: true });
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 17
+  }).addTo(map);
+
+  var bounds = [];
+
+  ZONES.forEach(function (z) {
+    var dio = DIO[z.dio];
+    var n = z.recintos.length;
+    var size = 34 + Math.min(n, 7) * 3;
+
+    var icon = L.divIcon({
+      className: '',
+      html: '<div class="me-pin" style="width:' + size + 'px;height:' + size + 'px;background:' + dio.color + '">' + n + '</div>',
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2]
+    });
+
+    var items = z.recintos.map(function (r) { return '<li>' + r + '</li>'; }).join('');
+    var html =
+      '<div class="me-pop-dio" style="color:' + dio.color + '">' + dio.label + '</div>' +
+      '<div class="me-pop-zone">' + z.zone + '</div>' +
+      '<ul class="me-pop-list">' + items + '</ul>';
+
+    L.marker([z.lat, z.lng], { icon: icon, title: z.zone })
+      .addTo(map)
+      .bindPopup(html, { maxWidth: 260, closeButton: true });
+
+    bounds.push([z.lat, z.lng]);
+  });
+
+  map.fitBounds(bounds, { padding: [60, 50] });
+
+  // legend
+  var legend = L.control({ position: 'bottomleft' });
+  legend.onAdd = function () {
+    var d = L.DomUtil.create('div', 'me-legend');
+    var rows = Object.keys(DIO).map(function (k) {
+      return '<div class="me-legend-row"><span class="me-legend-dot" style="background:' + DIO[k].color + '"></span>' + DIO[k].label + '</div>';
+    }).join('');
+    d.innerHTML = '<h4>15 recintos atendidos</h4>' + rows;
+    L.DomEvent.disableClickPropagation(d);
+    return d;
+  };
+  legend.addTo(map);
+
+  // let the wheel scroll the parent page; ctrl/cmd + wheel zooms the map
+  map.on('focus', function () { map.scrollWheelZoom.enable(); });
+  map.on('blur', function () { map.scrollWheelZoom.disable(); });
+})();
+</script>
+</body>
+</html>
