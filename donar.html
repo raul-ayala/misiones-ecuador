@@ -8,6 +8,24 @@
 <body>
 <x-dc>
 <helmet>
+<title>Donar · Misiones Ecuador</title>
+<meta name="description" content="Tu aporte se convierte en consultas médicas gratuitas, capillas levantadas y misioneros en territorio. Dona con PayPal o PayPhone.">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta property="og:url" content="https://misionesecuador.org/donar.html">
+<link rel="canonical" href="https://misionesecuador.org/donar.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Misiones Ecuador">
+<meta property="og:title" content="Donar · Misiones Ecuador">
+<meta property="og:description" content="Tu aporte se convierte en consultas médicas gratuitas, capillas levantadas y misioneros en territorio. Dona con PayPal o PayPhone.">
+<meta property="og:image" content="https://misionesecuador.org/assets/social-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Misioneros levantando una cruz en las montañas del Ecuador">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Donar · Misiones Ecuador">
+<meta name="twitter:description" content="Tu aporte se convierte en consultas médicas gratuitas, capillas levantadas y misioneros en territorio. Dona con PayPal o PayPhone.">
+<meta name="twitter:image" content="https://misionesecuador.org/assets/social-preview.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=block" rel="stylesheet">
@@ -55,7 +73,6 @@
         <a href="que-hacemos.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Qué hacemos</a>
         <a href="impacto.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Nuestro impacto</a>
         <a href="sumate.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Súmate</a>
-        <a href="blog.html" style="font-size: 15px; font-weight: 500; color: #1A1A1A; text-decoration: none;" style-hover="color: #296FB7;">Blog</a>
       </nav>
       <a href="{{ donateUrl }}" target="{{ donateTarget }}" rel="{{ donateRel }}" style="display: inline-flex; align-items: center; background: {{ donateColor }}; color: #1A1A1A; font-weight: 700; font-size: 15px; padding: 12px 24px; border-radius: 999px; text-decoration: none; white-space: nowrap; box-shadow: 0 8px 22px -8px rgba(255,203,4,0.7); transition: transform 0.2s ease;" style-hover="transform: translateY(-1px);">Donar</a>
     </div>
@@ -168,9 +185,18 @@
           </div>
           <h3 style="position: relative; font-family: 'Block Berthold', 'Montserrat', sans-serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 32px); text-transform: uppercase; letter-spacing: 0.01em; margin: 0 0 14px; color: #FFFFFF;">Donación en línea</h3>
           <p style="position: relative; font-size: 16px; line-height: 1.62; color: rgba(255,255,255,0.88); margin: 0 0 28px; flex: 1;">
-            Aporta de forma segura con tarjeta de crédito o débito. Puedes hacer una donación única o mensual.
+            Aporta de forma segura con tarjeta de crédito o débito. Puedes donar con PayPal o con PayPhone.
           </p>
-          <a href="{{ donateUrl }}" target="{{ donateTarget }}" rel="{{ donateRel }}" style="position: relative; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: {{ donateColor }}; color: #1A1A1A; font-weight: 700; font-size: 16px; padding: 16px 32px; border-radius: 999px; text-decoration: none; box-shadow: 0 12px 28px -12px rgba(0,0,0,0.45); transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">Ir a donar <span style="font-size: 18px; line-height: 1;">→</span></a>
+          <div style="position: relative; display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="{{ donateUrl }}" target="{{ donateTarget }}" rel="{{ donateRel }}" style="display: inline-flex; align-items: center; gap: 12px; background: {{ donateColor }}; color: #1A1A1A; font-weight: 700; font-size: 16px; padding: 15px 30px; border-radius: 999px; text-decoration: none; box-shadow: 0 12px 28px -12px rgba(0,0,0,0.45); transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">
+              <img src="assets/pay-paypal.png" alt="PayPal" style="height: 21px; width: auto; display: block; flex-shrink: 0;">
+              Donar
+            </a>
+            <a href="{{ payphoneUrl }}" target="{{ payphoneTarget }}" rel="{{ payphoneRel }}" style="display: inline-flex; align-items: center; gap: 12px; background: #FFFFFF; color: #12283F; font-weight: 700; font-size: 16px; padding: 15px 30px; border-radius: 999px; text-decoration: none; box-shadow: 0 12px 28px -12px rgba(0,0,0,0.45); transition: transform 0.2s ease, background 0.2s ease;" style-hover="background: #F2F7FC; transform: translateY(-2px);">
+              <img src="assets/pay-payphone-dark.svg" alt="PayPhone" style="height: 17px; width: auto; display: block; flex-shrink: 0;">
+              Donar
+            </a>
+          </div>
         </div>
 
         <!-- escríbenos -->
@@ -201,7 +227,7 @@
 
     <div data-reveal style="position: relative; max-width: 820px; margin: 0 auto; text-align: center;">
       <h2 style="font-family: 'Block Berthold', 'Montserrat', sans-serif; font-weight: 400; font-size: clamp(30px, 4.4vw, 58px); line-height: 0.96; text-transform: uppercase; letter-spacing: 0.005em; margin: 0 0 18px; color: #FFFFFF; text-wrap: balance;">
-        Gracias por tender el puente
+        Gracias por tender puentes
       </h2>
       <p style="font-size: clamp(16px, 1.3vw, 19px); line-height: 1.62; color: rgba(255,255,255,0.9); margin: 0 auto; max-width: 34em;">
         Detrás de cada aporte hay una familia acompañada, un enfermo visitado y una comunidad que se sabe querida.
@@ -227,7 +253,6 @@
             <li><a href="quienes-somos.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Quiénes somos</a></li>
             <li><a href="que-hacemos.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Qué hacemos</a></li>
             <li><a href="impacto.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Nuestro impacto</a></li>
-            <li><a href="blog.html" style="font-size: 15px; color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">Blog</a></li>
           </ul>
         </div>
         <div>
@@ -243,6 +268,7 @@
           <h4 style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin: 0 0 18px;">Contacto</h4>
           <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
             <li style="display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,0.82); font-size: 14px; word-break: break-all;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FB0E0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M4 4h16v16H4z"></path><path d="m4 6 8 6 8-6"></path></svg>misionesecuador.fsj@gmail.com</li>
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 15px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FB0E0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#7FB0E0" stroke="none"></circle></svg><a href="https://instagram.com/misiones.ecuador" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.82); text-decoration: none;" style-hover="color: #FFFFFF;">@misiones.ecuador</a></li>
             <li style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.82); font-size: 15px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FB0E0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>Guayaquil, Ecuador</li>
           </ul>
         </div>
@@ -338,11 +364,16 @@ class Component extends DCLogic {
   renderVals() {
     const url = this.props.donateUrl ?? 'https://www.paypal.com/ncp/payment/S46SW55H8MW9N';
     const ext = /^https?:\/\//i.test(url);
+    const pp = this.props.payphoneUrl ?? 'https://ppls.me/5JDSrG8c7WDWHSECgSTQNA';
+    const ppExt = /^https?:\/\//i.test(pp);
     return {
       donateColor: this.props.donateColor ?? '#FFCB04',
       donateUrl: url,
       donateTarget: ext ? '_blank' : null,
       donateRel: ext ? 'noopener noreferrer' : null,
+      payphoneUrl: pp,
+      payphoneTarget: ppExt ? '_blank' : null,
+      payphoneRel: ppExt ? 'noopener noreferrer' : null,
     };
   }
 }

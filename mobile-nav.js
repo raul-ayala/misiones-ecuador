@@ -7,8 +7,7 @@
     { href: 'quienes-somos.html', label: 'Quiénes somos' },
     { href: 'que-hacemos.html', label: 'Qué hacemos' },
     { href: 'impacto.html', label: 'Nuestro impacto' },
-    { href: 'sumate.html', label: 'Súmate' },
-    { href: 'blog.html', label: 'Blog' }
+    { href: 'sumate.html', label: 'Súmate' }
   ];
 
   var isOpen = false, btn, sheet, bars = [], items = [], scrollY = 0;

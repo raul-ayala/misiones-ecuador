@@ -26,15 +26,21 @@
     'Proyecto de jóvenes laicos al servicio de la misión evangelizadora de la Iglesia local en el Ecuador.': 'A project of lay young people serving the evangelizing mission of the local Church in Ecuador.',
     '+2.067': '+2,067',
     '#HechosParaElEncuentro': 'Made for the encounter',
+    'Instagram': 'Instagram',
     'Jóvenes reunidos junto a la cruz al cierre de un congreso': 'Young people gathered around the cross at the close of a congress',
     'Grupo de voluntarios universitarios durante una misión': 'A group of university volunteers during a mission',
     'Mujer de la comunidad recibiendo su canasta navideña': 'A woman from the community receiving her Christmas basket',
+    'Donar con PayPal': 'Donate with PayPal',
+    'Donar con PayPhone': 'Donate with PayPhone',
+    'Aporta de forma segura con tarjeta de crédito o débito. Puedes donar con PayPal o con PayPhone.': 'Give securely by credit or debit card. You can donate with PayPal or PayPhone.',
+    'Niña de la comunidad y voluntaria jugando juntas al final de la jornada': 'A girl from the community and a volunteer playing together at the end of the day',
+    'Pago seguro procesado por PayPal y PayPhone': 'Secure payment processed by PayPal and PayPhone',
     'Gracias': 'Thank you',
     'Enviando tu solicitud…': 'Sending your request…',
     'No pudimos enviar tu solicitud. Escríbenos a misionesecuador.fsj@gmail.com': 'We could not send your request. Please write to us at misionesecuador.fsj@gmail.com',
     'Quiero sumarme': 'I want to join',
     'Dos formas de sumarte': 'Two ways to join',
-    'Elige cómo tender el puente': 'Choose how to build the bridge',
+    'Elige cómo tender puentes': 'Choose how to build bridges',
     'Puedes ir a misión con tus manos o sostenerla con tu aporte. Las dos hacen posible el encuentro.': 'You can go on mission with your hands or sustain it with your gift. Both make the encounter possible.',
     'Opción 1': 'Option 1',
     'Opción 2': 'Option 2',
@@ -87,7 +93,11 @@
     'Fe': 'Faith',
     'Comunidad': 'Community',
     'Servicio': 'Service',
-    'Seis formas de tender el puente': 'Six ways to build the bridge',
+    'Seis formas de tender puentes': 'Six ways to build bridges',
+    'Nuestro impacto en los últimos 2 años': 'Our impact over the last 2 years',
+    'Somos una organización de laicos católicos al servicio de la Iglesia local.': 'We are an organization of Catholic lay people at the service of the local Church.',
+    'Creemos que la misión es el lugar donde misioneros y comunidades se descubren hermanos, y donde el Evangelio se vive en los encuentros de la vida cotidiana.': 'We believe mission is the place where missionaries and communities discover they are brothers and sisters, and where the Gospel is lived in the encounters of everyday life.',
+    'Según la necesidad de la comunidad y junto con ellos, construimos capillas y espacios que se vuelven lugares de encuentro.': 'According to the needs of the community and together with them, we build chapels and spaces that become places of encounter.',
     'En cada misión caminamos junto a las comunidades: anunciamos la Buena Noticia, construimos espacios de encuentro y llevamos salud a quienes más lo necesitan.': 'On every mission we walk alongside the communities: we proclaim the Good News, we build spaces of encounter, and we bring health care to those who need it most.',
     'Evangelización': 'Evangelization',
     'Construcción': 'Construction',
@@ -108,7 +118,7 @@
     'atendidas': 'served',
     'Detrás de cada cifra hay una comunidad que dejó de estar sola. Tu aporte hace posible el próximo encuentro.': 'Behind every figure is a community that is no longer alone. Your gift makes the next encounter possible.',
     'Hay un lugar para ti en la misión': 'There is a place for you in the mission',
-    'No importa cuánto tiempo tengas ni tu oficio: cada don suma. Elige cómo quieres tender el puente.': 'However much time you have and whatever your trade: every gift counts. Choose how you want to build the bridge.',
+    'No importa cuánto tiempo tengas ni tu oficio: cada don suma. Elige cómo quieres tender puentes.': 'However much time you have and whatever your trade: every gift counts. Choose how you want to build bridges.',
     'Misionero': 'Missionary',
     'Únete a un grupo misionero y vive una misión en territorio: evangeliza, construye y sirve junto a la comunidad.': 'Join a mission group and live a mission on the ground: evangelize, build and serve alongside the community.',
     'Quiero ir a misión': 'I want to go on mission',
@@ -121,15 +131,15 @@
     'Te contactamos en menos de 48 horas.': 'We will contact you within 48 hours.',
     'Tu ayuda transforma vidas': 'Your help transforms lives',
     'Cada donación es un encuentro': 'Every donation is an encounter',
-    'Detrás de cada sonrisa hay alguien que decidió tender el puente. Hoy puedes ser tú. Tu aporte lleva esperanza a las comunidades más vulnerables del Ecuador.': 'Behind every smile is someone who decided to build the bridge. Today it can be you. Your gift brings hope to the most vulnerable communities in Ecuador.',
+    'Detrás de cada sonrisa hay alguien que decidió tender puentes. Hoy puedes ser tú. Tu aporte lleva esperanza a las comunidades más vulnerables del Ecuador.': 'Behind every smile is someone who decided to build bridges. Today it can be you. Your gift brings hope to the most vulnerable communities in Ecuador.',
     'Coordinamos tu donación de forma segura.': 'We handle your donation securely.',
 
     /* ---- quiénes somos ---- */
     'Comunidad de laicos al servicio de la misión': 'A community of lay people in the service of the mission',
     'Laicos al servicio de la misión': 'Lay people in the service of the mission',
     'Nuestra misión': 'Our mission',
-    'El encuentro vivo con Jesucristo': 'A living encounter with Christ',
-    'Misiones Ecuador es un proyecto de jóvenes laicos al servicio de la misión evangelizadora de la Iglesia local, que promueve el encuentro vivo con Jesucristo a través del servicio a los más necesitados.': 'Misiones Ecuador is a lay missionary project supporting the evangelizing of the Catholic Church in local communities. We promote personal encounters with Christ through service to those in most need.',
+    'El encuentro vivo con Cristo': 'A living encounter with Christ',
+    'Misiones Ecuador es un proyecto de jóvenes laicos al servicio de la misión evangelizadora de la Iglesia local, que promueve el encuentro vivo con Cristo a través del servicio a los más necesitados.': 'Misiones Ecuador is a lay missionary project supporting the evangelizing of the Catholic Church in local communities. We promote personal encounters with Christ through service to those in most need.',
     'Respondemos a las necesidades materiales y espirituales de las comunidades que acompañamos mediante distintos tipos de misiones, promoviendo su desarrollo integral a la luz del Evangelio.': 'Through diverse forms of mission, we address the material and spiritual needs of the communities we accompany, seeking to foster their holistic development in the light of the Gospel.',
     'Nuestro mensaje': 'Our message',
     'Formamos puentes de encuentro entre voluntarios y comunidades necesitadas para anunciar el Evangelio, generar un impacto duradero y despertar en ellos el deseo de evangelizar': 'We build bridges of encounter between volunteers and communities in need in order to proclaim the Gospel, create lasting impact, and awaken in them the desire to evangelize',
@@ -148,6 +158,8 @@
     'Ecuador. Acompaña nuestro trabajo en Tarifa, Samborondón y Daule con presencia sacerdotal y pastoral.': 'Ecuador. Accompanies our work in Tarifa, Samborondón and Daule with priestly and pastoral presence.',
     'Diócesis de Santa Elena': 'Diocese of Santa Elena',
     'Ecuador. Nos abre las puertas de Bajada de Chanduy y Cerecita para servir a sus recintos.': 'Ecuador. Opens the doors of Bajada de Chanduy and Cerecita so we can serve their villages.',
+    'Acompaña nuestro trabajo en Tarifa, Samborondón y Daule con presencia sacerdotal y pastoral.': 'Accompanies our work in Tarifa, Samborondón and Daule with priestly and pastoral presence.',
+    'Nos abre las puertas de Bajada de Chanduy y Cerecita para servir a sus recintos.': 'Opens the doors of Bajada de Chanduy and Cerecita so we can serve their villages.',
     '15 comunidades, 4 diócesis': '15 communities, 4 dioceses',
     'Servimos en recintos rurales de Daule, Santa Elena, Cuenca y Guayaquil, acompañando a cada comunidad de forma continua.': 'We serve rural villages in Daule, Santa Elena, Cuenca and Guayaquil, accompanying each community continuously.',
     'Ver dónde trabajamos': 'See where we work',
@@ -174,9 +186,9 @@
 
     /* ---- impacto ---- */
     'El encuentro, en números': 'The encounter, in numbers',
-    'Dos años de misión en las comunidades rurales del Ecuador.': 'Two years of mission in the rural communities of Ecuador.',
-    'Desde 2024': 'Since 2024',
-    'Lo que hemos construido juntos en dos años de misión.': 'What we have built together over two years of mission.',
+    'Misionamos en comunidades rurales del Ecuador desde 2003. Estas son las cifras de los últimos 2 años.': 'We have been on mission in the rural communities of Ecuador since 2003. These are the figures for the last 2 years.',
+    'Los últimos 2 años': 'The last 2 years',
+    'Desde 2003 realizamos misiones en comunidades rurales del Ecuador. Estas son las cifras de los dos últimos años.': 'Since 2003 we have carried out missions in the rural communities of Ecuador. These are the figures for the last two years.',
     'Beneficiarios': 'Beneficiaries',
     'atendidos': 'served',
     'Voluntarios': 'Volunteers',
@@ -228,7 +240,7 @@
     'Ir a donar': 'Go to donate',
     'Transferencia o especies': 'Transfer or in-kind',
     'Para transferencias bancarias, donaciones de medicinas, materiales de construcción o alimentos, escríbenos y coordinamos contigo.': 'For bank transfers or donations of medicine, building materials or food, write to us and we will arrange it with you.',
-    'Gracias por tender el puente': 'Thank you for building the bridge',
+    'Gracias por tender puentes': 'Thank you for building bridges',
     'Detrás de cada aporte hay una familia acompañada, un enfermo visitado y una comunidad que se sabe querida.': 'Behind every gift is a family accompanied, a sick person visited, and a community that knows it is loved.',
 
     /* ---- blog index ---- */
@@ -497,8 +509,10 @@
       wrap.appendChild(b);
     });
 
-    // sit just before the donate button when there is one
-    var donate = header.querySelector('a[href*="donar"], a[href*="#dona"]');
+    // Se coloca justo antes del botón de donar. En donar.html ese botón apunta
+    // directo a PayPal, así que hay que reconocer también esas variantes o el
+    // selector falla y el toggle termina después del botón.
+    var donate = header.querySelector('a[href*="donar"], a[href*="#dona"], a[href*="donate"], a[href*="paypal.com"], a[href*="ppls.me"]');
     if (donate && donate.parentNode) donate.parentNode.insertBefore(wrap, donate);
     else header.firstElementChild && header.firstElementChild.appendChild(wrap);
 
